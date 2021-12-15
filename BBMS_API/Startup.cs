@@ -12,14 +12,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using DNC_API.Models;
-using DNC_API.Models.Auth;
+using BBMS_API.Models;
+using BBMS_API.Models.Auth;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace DNC_API
+namespace BBMS_API
 {
     public class Startup
     {
@@ -69,7 +69,7 @@ namespace DNC_API
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "DNC_API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "BBMS_API", Version = "v1" });
             });
         }
 
@@ -80,7 +80,7 @@ namespace DNC_API
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "DNC_API v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BBMS_API v1"));
             }
 
             app.UseHttpsRedirection();

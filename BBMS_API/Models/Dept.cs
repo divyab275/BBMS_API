@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace DNC_API.Models
+namespace BBMS_API.Models
 {
     [Table("Depts")]
     public class Dept

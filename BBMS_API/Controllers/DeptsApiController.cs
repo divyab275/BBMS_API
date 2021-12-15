@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using DNC_API.Models;
+using BBMS_API.Models;
 using Microsoft.AspNetCore.Authorization;
 
-namespace DNC_API.Controllers
+namespace BBMS_API.Controllers
 {
     //[Authorize]
     [Route("api/[controller]")]

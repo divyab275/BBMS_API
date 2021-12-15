@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
-namespace DNC_API.Models.Auth
+namespace BBMS_API.Models.Auth
 {
     public class RegisterModel
     {

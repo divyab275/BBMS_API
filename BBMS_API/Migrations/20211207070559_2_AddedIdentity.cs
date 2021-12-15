@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace DNC_API.Migrations
+namespace BBMS_API.Migrations
 {
     public partial class _2_AddedIdentity : Migration
     {

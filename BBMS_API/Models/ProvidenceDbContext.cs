@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using DNC_API.Models.Auth;
+using BBMS_API.Models.Auth;
 
-namespace DNC_API.Models
+namespace BBMS_API.Models
 {
     public class ProvidenceDbContext : IdentityDbContext<ApplicationUser> // DbContext
     {

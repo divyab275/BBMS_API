@@ -1,6 +1,6 @@
 using System;
 
-namespace DNC_API
+namespace BBMS_API
 {
     public class WeatherForecast
     {

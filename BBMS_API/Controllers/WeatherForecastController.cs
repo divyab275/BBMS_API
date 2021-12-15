@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DNC_API.Controllers
+namespace BBMS_API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

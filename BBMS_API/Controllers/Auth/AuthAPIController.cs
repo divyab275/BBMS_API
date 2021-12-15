@@ -1,4 +1,4 @@
-﻿using DNC_API.Models.Auth;
+﻿using BBMS_API.Models.Auth;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -13,7 +13,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DNC_API.Controllers.Auth
+namespace BBMS_API.Controllers.Auth
 {
     
     [Route("api/[controller]")]
