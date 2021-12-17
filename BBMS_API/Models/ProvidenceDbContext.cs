@@ -11,6 +11,16 @@ namespace BBMS_API.Models
     public class ProvidenceDbContext : IdentityDbContext<ApplicationUser> // DbContext
     {
         public DbSet<Dept> Depts { get; set; }
+        public DbSet<BloodBank> BloodBanks { get; set; }
+        public DbSet<BloodCamp> BloodCamps { get; set; }
+
+        public DbSet<Donation> Donations { get; set; }
+        public DbSet<Donor> Donors { get; set; }
+        public DbSet<Hospital> Hospitals { get; set; }
+        public DbSet<Inventory> Inventories { get; set; }
+
+
+
 
         public ProvidenceDbContext() : base()
         {
