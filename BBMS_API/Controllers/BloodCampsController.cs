@@ -24,7 +24,7 @@ namespace BBMS_API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<BloodCamp>>> GetBloodCamps()
         {
-            return await _context.BloodCamps.ToListAsync();
+            return await _context.BloodCamps.Include(camp => camp.BloodBank).ToListAsync();
         }
 
         // GET: api/BloodCamps/5
