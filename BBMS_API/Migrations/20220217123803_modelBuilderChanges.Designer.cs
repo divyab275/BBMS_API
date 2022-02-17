@@ -4,14 +4,16 @@ using BBMS_API.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BBMS_API.Migrations
 {
     [DbContext(typeof(ProvidenceDbContext))]
-    partial class ProvidenceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220217123803_modelBuilderChanges")]
+    partial class modelBuilderChanges
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -189,8 +191,6 @@ namespace BBMS_API.Migrations
                     b.HasIndex("BloodCampID");
 
                     b.HasIndex("BloodCampID1");
-
-                    b.HasIndex("DonorID");
 
                     b.HasIndex("HospitalID");
 
@@ -429,19 +429,11 @@ namespace BBMS_API.Migrations
                         .WithMany()
                         .HasForeignKey("BloodCampID1");
 
-                    b.HasOne("BBMS_API.Models.Donor", "Donor")
-                        .WithMany()
-                        .HasForeignKey("DonorID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("BBMS_API.Models.Hospital", "Hospital")
                         .WithMany()
                         .HasForeignKey("HospitalID");
 
                     b.Navigation("BloodCamp");
-
-                    b.Navigation("Donor");
 
                     b.Navigation("Hospital");
                 });

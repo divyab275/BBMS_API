@@ -13,5 +13,7 @@ namespace BBMS_API.Models
         public string City { get; set; }
         public string ContactNo { get; set; }
 
+        
+
     }
 }

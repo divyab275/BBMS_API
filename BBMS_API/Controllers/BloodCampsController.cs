@@ -31,7 +31,18 @@ namespace BBMS_API.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<BloodCamp>> GetBloodCamp(int id)
         {
+
             var bloodCamp = await _context.BloodCamps.FindAsync(id);
+
+            _context.Entry(bloodCamp)
+                .Collection(camp => camp.Donations).Query()
+                .Include(donation=>donation.Donor)
+                .Load();
+
+          /*  var bloodCamp = await _context.BloodCamps.
+                Include(camp => camp.Donations
+                          .Where(donation => donation.BloodCampID == id)
+            ).ToListAsync(); */
 
             if (bloodCamp == null)
             {
@@ -40,6 +51,8 @@ namespace BBMS_API.Controllers
 
             return bloodCamp;
         }
+
+        
 
         // PUT: api/BloodCamps/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754

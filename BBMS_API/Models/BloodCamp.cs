@@ -21,5 +21,6 @@ namespace BBMS_API.Models
         public DateTime EndDate { get; set; }
 
         public BloodBank BloodBank { get; set; } //Navigation Property
+        public List<Donation> Donations { get; set; }
     }
 }

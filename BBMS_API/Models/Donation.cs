@@ -13,9 +13,10 @@ namespace BBMS_API.Models
         public int HBCount { get; set; }
         public int NoOfBottles { get; set; }
         public int? HospitalID { get; set; }
-        public int? BloodBankID { get; set; }
+        public int? BloodCampID { get; set; }
 
-        public BloodBank BloodBank { get; set; }
+        public BloodCamp BloodCamp { get; set; }
         public Hospital Hospital { get; set; }
+        public Donor Donor { get; set; }
     }
 }
