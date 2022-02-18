@@ -24,6 +24,15 @@ namespace BBMS_API.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Inventory>>> GetInventories()
         {
+            Inventory i = new Inventory();
+
+            var test = _context.Inventories.ToList().OrderByDescending(x => x.ExpiryDate);
+            foreach (var item in test)
+            {
+               var BBDeatails = _context.BloodBanks.Where(x => x.ID == item.BloodBankID);
+                var te =BBDeatails.First();
+                item.BloodBank = te;
+            }
             return await _context.Inventories.ToListAsync();
         }
 
